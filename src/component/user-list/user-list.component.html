@@ -1,0 +1,7 @@
+<h2>User List (Smart Component)</h2>
+<app-user-form (add)="onAddUser($event)"></app-user-form>
+<app-user-item
+	*ngFor="let user of users"
+	[user]="user"
+	(delete)="onDeleteUser($event)">
+</app-user-item>

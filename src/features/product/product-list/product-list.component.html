@@ -1,0 +1,9 @@
+<button *ngIf="!authService.isAuthenticated()" (click)="loginUser()">Log in</button>
+<button *ngIf="authService.isAuthenticated()" (click)="logoutUser()">Log out</button>
+
+<h2>Product List</h2>
+<app-custom-button label="Click me!"></app-custom-button>
+
+<ul>
+	<li *ngFor="let p of products">{{ p | capitalize }}</li>
+</ul>

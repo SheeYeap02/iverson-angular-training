@@ -1,0 +1,10 @@
+<h3>Default Change detection</h3>
+<app-default-cd [user]="user"></app-default-cd>
+
+<hr>
+
+<h3>OnPush Change Detection</h3>
+<app-onpush-cd [user]="user"></app-onpush-cd>
+
+<button (click)="mutateUser()">Mutate Name</button>
+<button (click)="replaceUser()">Replace User</button>
