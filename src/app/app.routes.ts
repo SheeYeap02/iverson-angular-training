@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import {OrderListComponent} from "../features/orders/order-list/order-list.component";
+import {ThemeToggleComponent} from "../component/theme-toggle/theme-toggle.component";
 
 export const routes: Routes = [
 	// Example of lazy load the route
@@ -23,7 +24,9 @@ export const routes: Routes = [
 		path: 'users',
 		loadChildren: () =>
 			import('../features/users/users.module').then(m => m.UsersModule)
+	},
+	{
+		path: 'theme-toggle',
+		component: ThemeToggleComponent
 	}
-
-
 ];
