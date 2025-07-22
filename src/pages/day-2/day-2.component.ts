@@ -4,6 +4,7 @@ import {ProductListComponent} from "../../features/product/product-list/product-
 import {RegisterFormComponent} from "../../component/register-form/register-form.component";
 import {UserListComponent} from "../../features/users/user-list/user-list.component";
 import {RouterOutlet} from "@angular/router";
+import {ThemeToggleComponent} from "../../component/theme-toggle/theme-toggle.component";
 
 @Component({
   selector: 'app-day-2',
@@ -12,7 +13,8 @@ import {RouterOutlet} from "@angular/router";
 		ProductListComponent,
 		RegisterFormComponent,
 		UserListComponent,
-		RouterOutlet
+		RouterOutlet,
+		ThemeToggleComponent
 	],
   templateUrl: './day-2.component.html',
   styleUrl: './day-2.component.css'
