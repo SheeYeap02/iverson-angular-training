@@ -8,10 +8,11 @@ import {HighlightDirective} from "../directives/highlight.directive";
 import {UserListComponent} from "../component/user-list/user-list.component";
 import {Day1Component} from "../pages/day-1/day-1.component";
 import {Day2Component} from "../pages/day-2/day-2.component";
+import {Day3Component} from "../pages/day-3/day-3.component";
 
 @Component({
   selector: 'app-root',
-	imports: [RouterOutlet, ParentComponent, SenderComponent, ReceiverComponent, Parent2Component, HighlightDirective, UserListComponent, Day1Component, Day2Component],
+	imports: [RouterOutlet, ParentComponent, SenderComponent, ReceiverComponent, Parent2Component, HighlightDirective, UserListComponent, Day1Component, Day2Component, Day3Component],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

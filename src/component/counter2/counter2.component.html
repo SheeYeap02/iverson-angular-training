@@ -1,0 +1,8 @@
+<h2>Counter 2 - Counter Signal</h2>
+<h3>Option 1: Using a service with signals and set to public</h3>
+<p>Current counter: {{ counterService.counter() }}</p>
+<p>Double counter: {{ counterService.doubleCounter() }}</p>
+<button (click)="counterService.increment()">Increment</button>
+<button (click)="counterService.decrement()">Decrement</button>
+<button (click)="counterService.reset()">Reset</button>
+<hr/>

@@ -1,0 +1,20 @@
+<h2>Counter 1</h2>
+<h3>Local State</h3>
+<p>Count: {{ count }}</p>
+<button (click)="increment()">Increment</button>
+<button (click)="decrement()">Decrement</button>
+<hr>
+
+<h3>Global (Service-Based)</h3>
+<p>Static Count: {{ staticCounter.getValue() }}</p>
+<p>Static Double Count: {{ staticCounter.getDoubleValue() }}</p>
+<button (click)="incStatic()">Increment Static</button>
+<button (click)="decStatic()">Decrement Static</button>
+<hr>
+
+<h3>Global (RxJS-Based)</h3>
+<p>Reactive Count: {{ countRx$ | async }}</p>
+<button (click)="incRx()">Increment Reactive</button>
+<button (click)="decRx()">Decrement Reactive</button>
+<hr>
+
