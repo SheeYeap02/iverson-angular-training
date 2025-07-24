@@ -1,48 +1,41 @@
 import { Routes } from '@angular/router';
-import {OrderListComponent} from "../features/orders/order-list/order-list.component";
-import {ThemeToggleComponent} from "../component/theme-toggle/theme-toggle.component";
-import {Day3Component} from "../pages/day-3/day-3.component";
-import {Day4Component} from "../pages/day-4/day-4.component";
-import {Day2Component} from "../pages/day-2/day-2.component";
-import {Day1Component} from "../pages/day-1/day-1.component";
 
 export const routes: Routes = [
-	// Example of lazy load the route
-	// During this first load of the application, the module is not loaded
-	// It will only be loaded when the user navigates to the 'products' path
-	// When you build the application, the module will be bundled into a separate chunk
-	{
-		path: 'products',
-		loadChildren: ()=>
-			import('../features/product/product.module').then(m => m.ProductModule)
-	},
-	// Example of Eager Load
-	// The url will be loaded immediately when the application starts
-	// Impact on the load time of opening the application first time (first load)
-	{
-		path: 'orders',
-		component: OrderListComponent
-	},
-	// lazy load the users module
-	{
-		path: 'users',
-		loadChildren: () =>
-			import('../features/users/users.module').then(m => m.UsersModule)
-	},
 	{
 		path: 'day-1',
-		component: Day1Component
+		loadComponent: () =>
+			import('../pages/day-1/day-1.component').then(m => m.Day1Component)
 	},
 	{
 		path: 'day-2',
-		component: Day2Component
+		// loadComponent: () =>
+		// 	import('../pages/day-2/day-2.component').then(m => m.Day2Component),
+		loadChildren: () =>
+			import('../pages/day-2/day-2.module').then(m => m.Day2Module)
 	},
 	{
 		path: 'day-3',
-		component: Day3Component
+		loadComponent: () =>
+			import('../pages/day-3/day-3.component').then(m => m.Day3Component)
 	},
 	{
 		path: 'day-4',
-		component: Day4Component
+		loadComponent: () =>
+			import('../pages/day-4/day-4.component').then(m => m.Day4Component)
+	},
+	{
+		path: '',
+		loadComponent: () =>
+			import('../pages/home/home.component').then(m => m.HomeComponent)
+	},
+	{
+		path: 'about',
+		loadComponent: () =>
+			import('../pages/about/about.component').then(m => m.AboutComponent)
+	},
+	{
+		path: 'articles',
+		loadComponent: () =>
+			import('../pages/articles/articles.component').then(m => m.ArticlesComponent)
 	}
 ];

@@ -1,0 +1,9 @@
+<h2>Lab 4: Latest Articles (dynamic page using Pre-rendered + TransferState + Signals)</h2>
+<ul>
+	@for( article of articles(); track article.id) {
+		<div>
+			<p>{{ article.title }}</p>
+			<p>{{ article.body.slice(0, 100) }}</p>
+		</div>
+	}
+</ul>

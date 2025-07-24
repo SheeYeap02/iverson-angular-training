@@ -35,14 +35,17 @@ export class ZonelessAngularComponent {
 
 		// native DOM event
 		setTimeout(() => {
-			// const btn = document.getElementById('native-button');
-			// if (btn) {
-			// 	btn.addEventListener('click', () => {
-			// 		this.plainCount++;
-			// 		this.signalCount.update(val => val + 1);
-			// 		console.log('plainCount in native event listener is incremented to:', this.plainCount, '| signal:', this.signalCount());
-			// 	});
-			// }
+			if (typeof window !== 'undefined') {
+				const btn = document.getElementById('native-button');
+
+				if (btn) {
+					btn.addEventListener('click', () => {
+						this.plainCount++;
+						this.signalCount.update(val => val + 1);
+						console.log('plainCount in native event listener is incremented to:', this.plainCount, '| signal:', this.signalCount());
+					});
+				}
+			}
 		});
 
 		// Observe reactivity
