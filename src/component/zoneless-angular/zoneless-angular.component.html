@@ -1,0 +1,19 @@
+<h2>Angular Zoneless Reactivity Comparison</h2>
+<section>
+	<h2>Manual Click</h2>
+	<p>Plain Count: {{ getPlainCount() }}</p>
+	<p>Signal Count: {{ signalCount() }}</p>
+	<button (click)="incrementPlainCount()">Increment Manually</button>
+</section>
+<hr/>
+<section>
+	<h2>setTimeout, setInterval, Promise</h2>
+	<p>Observe console logs for async triggers.</p>
+</section>
+<hr/>
+<section>
+	<h2>Native DOM Event</h2>
+	<button id="native-button">Native Event: Increment</button>
+	<p>Plain Count (Native): {{ getPlainCount() }}</p>
+	<p>Signal Count (Native): {{ signalCount() }}</p>
+</section>

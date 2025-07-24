@@ -9,12 +9,7 @@ import {ThemeToggleComponent} from "../../component/theme-toggle/theme-toggle.co
 @Component({
   selector: 'app-day-2',
 	imports: [
-		CustomButtonComponent,
-		ProductListComponent,
-		RegisterFormComponent,
-		UserListComponent,
 		RouterOutlet,
-		ThemeToggleComponent
 	],
   templateUrl: './day-2.component.html',
   styleUrl: './day-2.component.css'

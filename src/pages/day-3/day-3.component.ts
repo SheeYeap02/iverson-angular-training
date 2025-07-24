@@ -8,7 +8,6 @@ import {EmployeeManagerComponent} from "../../component/employee-manager/employe
 @Component({
   selector: 'app-day-3',
 	imports: [
-		RouterOutlet,
 		CounterComponent,
 		Counter2Component,
 		CounterViewComponent,

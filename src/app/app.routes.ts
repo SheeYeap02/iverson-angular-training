@@ -2,6 +2,9 @@ import { Routes } from '@angular/router';
 import {OrderListComponent} from "../features/orders/order-list/order-list.component";
 import {ThemeToggleComponent} from "../component/theme-toggle/theme-toggle.component";
 import {Day3Component} from "../pages/day-3/day-3.component";
+import {Day4Component} from "../pages/day-4/day-4.component";
+import {Day2Component} from "../pages/day-2/day-2.component";
+import {Day1Component} from "../pages/day-1/day-1.component";
 
 export const routes: Routes = [
 	// Example of lazy load the route
@@ -27,7 +30,19 @@ export const routes: Routes = [
 			import('../features/users/users.module').then(m => m.UsersModule)
 	},
 	{
+		path: 'day-1',
+		component: Day1Component
+	},
+	{
+		path: 'day-2',
+		component: Day2Component
+	},
+	{
 		path: 'day-3',
 		component: Day3Component
+	},
+	{
+		path: 'day-4',
+		component: Day4Component
 	}
 ];
