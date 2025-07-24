@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
 import {ParentComponent} from "../component/parent/parent.component";
 import {SenderComponent} from "../component/sender/sender.component";
 import {ReceiverComponent} from "../component/receiver/receiver.component";
@@ -12,11 +12,11 @@ import {Day3Component} from "../pages/day-3/day-3.component";
 import {Day4Component} from "../pages/day-4/day-4.component";
 
 @Component({
-  selector: 'app-root',
+	selector: 'app-root',
 	imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+	templateUrl: './app.component.html',
+	styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular-training';
+	title = 'angular-training';
 }
