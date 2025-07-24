@@ -1,0 +1,13 @@
+<h2>Lab 3 - Transform an observable (List of products) into a signal using toSignal</h2>
+@if (products().length === 0) {
+	<p>Loading...</p>
+} @else {
+	@for (product of products(); track product.id) {
+		<div>
+			<h3>{{ product.title }}</h3>
+			<p>{{ product.price }}</p>
+			<p>{{ product.description }}</p>
+		</div>
+	}
+}
+<hr/>
